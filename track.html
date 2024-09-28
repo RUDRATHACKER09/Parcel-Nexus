@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Parcel</title>
+    <link rel="stylesheet" href="estimate.css"> <!-- You can reuse your CSS -->
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="Assets/logo.png" alt="Parcel Service Logo">
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="track.html">Track Parcel</a>
+            <a href="estimate.html">Shipping Cost Estimator</a>
+            <a href="schedule.html">Schedule Parcel</a>
+            <a href="support.html">Support</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="track">
+        <section class="form-container">
+            <h2>Track Your Parcel</h2>
+            <form id="trackForm" onsubmit="return false;">
+                <input type="text" placeholder="Enter Tracking Number" id="trackingNumber" required>
+                <button type="button" class="cta-button" onclick="trackParcel()">Track</button>
+            </form>
+            <div id="trackResult"></div>
+        </section>
+    </main>
+    
+           <!-- Footer Section -->
+           <footer>
+            <div class="footer-content">
+                <p>&copy; 2024 Parcel Nexus. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy Policy</a> |
+                    <a href="#terms">Terms of Service</a> |
+                    <a href="#contact">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+
+    <script src="track.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>

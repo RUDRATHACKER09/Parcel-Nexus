@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh; /* Ensure the body fills the full height of the viewport */
+    display: flex;
+    flex-direction: column; /* Arrange body content vertically */
+    background-image: url("/Assets/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows for wrapping on smaller screens */
+}
+
+.logo img {
+    height: 80px;
+    width: auto; /* Use auto width for better responsiveness */
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap; /* Allows navigation items to wrap */
+}
+
+nav a {
+    margin: 0 15px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #FF3C3C;
+}
+
+/* Main content area (hero section) */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    flex-grow: 1; /* Ensure the hero section takes up the available space */
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #FF3C3C;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #FF6B6B;
+    transform: translateY(-3px);
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+}
+
+/* Footer styles */
+footer {
+    background-color: white;
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto; /* Ensure the footer stays at the bottom of the page */
+    width: 100%;
+}
+
+.footer-content p {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.footer-links a {
+    color: #FF3C3C;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: #FF6B6B;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .cta-button {
+        width: 100%; /* Full width button on small screens */
+        padding: 15px; /* Adjust padding */
+    }
+
+    nav {
+        flex-direction: column; /* Stack navigation items */
+        align-items: center; /* Center align items */
+    }
+
+    nav a {
+        margin: 10px 0; /* Adjust margins for stacked items */
+    }
+
+    .form-container {
+        padding: 15px; /* Adjust padding for form container */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column; /* Stack header items */
+        align-items: center;
+    }
+
+    .logo img {
+        height: 60px; /* Adjust logo size for small screens */
+    }
+
+    .hero {
+        padding: 30px 10px; /* Further adjust padding for hero section */
+    }
+}
